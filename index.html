@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Smooch&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/3c3fabb5a9.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <title>Corretora Isabel Leite</title>
 </head>
 <body>
@@ -19,20 +20,28 @@
         <h1>Isabel Leite</h1>
     </div>
     <ul>
-      <a href="./index.html"><li>Início</li></a>
-      <a href="./sobre.html"><li>Sobre</li></a>
-      <a href="./vantagens.html"><li>Vantagens</li></a>
-      <a href="./contato.html"><li>Contato</li></a>
+      <a href="#" class="inicio"><li>Início</li></a>
+      <a href="#"><li>Sobre</li></a>
+      <a href="#"><li>Vantagens</li></a>
+      <a href="#" class="contato"><li>Contato</li></a>
     </ul>
     </header>
 
     <main>
       <aside>
-        <h2><p>Faça compras nas melhores lojas e fábricas da cidade com acompanhamento de quem entende</p>
-        <p>Centenas de clientes pelo Brasil</p>
-        <p>Me siga nas redes sociais e fique por dentro das novidades da moda de Fortaleza:</p></h2>
-
-
+        <div id="texto">
+          <div id="inicio">
+            <h2><p>Faça compras nas melhores lojas e fábricas da cidade com acompanhamento de quem entende</p>
+              <p>Centenas de clientes pelo Brasil</p>
+              <p>Me siga nas redes sociais e fique por dentro das novidades da moda de Fortaleza:</p></h2>
+          </div>
+  
+          <div id="contato">
+            <h2><p>Tim  (85) 996936137</p>
+              <p>Entre em contato comigo no whatsapp, facebook ou instagram:</p>  
+            </h2>
+          </div>
+        </div>
         <ul>
           <li><a class="icone-redes" href="https://api.whatsapp.com/send?phone=5585996936137" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a></li>
           <li><a class="icone-redes" href="https://www.facebook.com/corretorademoda" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
@@ -43,6 +52,14 @@
         <img src="./imagens/perfil.jpeg" alt="perfil">
       </article>
 
+      <script>
+        $(document).ready(function(){
+          $("a").click(function(){
+            $("#texto").children().hide();
+            $(`#${$(this).attr("class")}`).show();
+          });
+        });
+      </script>
 
     </main>
 

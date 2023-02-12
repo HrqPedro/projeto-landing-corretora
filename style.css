@@ -61,3 +61,6 @@ a:hover{
     background-color: purple;
 }
 
+#contato{
+    display: none;
+}
